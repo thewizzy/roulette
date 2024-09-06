@@ -2,7 +2,7 @@ use crate::error_template::{AppError, ErrorTemplate};
 use leptos::*;
 use leptos_meta::*;
 use leptos_router::*;
-use crate::routes::{Roulette, RouletteDetail};
+use crate::routes::{Roulette, RouletteAdmin, RouletteDetail, User};
 
 #[component]
 pub fn App() -> impl IntoView {
@@ -33,6 +33,8 @@ pub fn App() -> impl IntoView {
                     <Route path="" view=HomePage/>
                     <Route path="/roulette" view=Roulette/>
                     <Route path="/roulette/:uuid" view=RouletteDetail/>
+                    <Route path="/roulette/:uuid/admin/:admin_code" view=RouletteAdmin/>
+                    <Route path="/user/:uuid" view=User/>
 
                 </Routes>
             </main>
